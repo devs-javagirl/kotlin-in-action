@@ -3,6 +3,7 @@ package org.javagirls.capitulo_2
 fun main() {
     println("KOTLIN --------------------------")
     // val = value ( read only )
+    // val nomeVariavel | tipo | valor
     val question: String = "The Ultimate Question of Life, the Universe, and Everything"
     println(question)
 
@@ -35,7 +36,6 @@ fun main() {
     var answerVar = 42
     answerVar = 45
     println(answerVar)
-
 
 }
 

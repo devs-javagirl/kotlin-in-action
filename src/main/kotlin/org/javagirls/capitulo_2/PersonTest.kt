@@ -3,11 +3,11 @@ package org.javagirls.capitulo_2
 fun main() {
     println("KOTLIN --------------------------")
     // construtor sem uso de new
-    val person = Person("Bob", true)
+    val `4Person` = Person("Bob", true)
     // acesso direto a propriedade name, mas o getter é invocado
-    println(person.name)
-    println(person.isStudent)
+    println(`4Person`.name)
+    println(`4Person`.isStudent)
     //acesso direto a propriedade, mas o setter é invocado
-    person.isStudent = false
-    println(person.isStudent)
+    `4Person`.isStudent = false
+    println(`4Person`.isStudent)
 }

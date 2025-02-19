@@ -4,6 +4,7 @@ public class Variables {
     public static void main(String[] args) {
         System.out.println("JAVA --------------------------");
         final String name = "Cris";
+
         int age = 20;
         String language;
         language = "Kotlin";
