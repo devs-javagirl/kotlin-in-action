@@ -1,4 +1,4 @@
-package org.javagirls.capitulo_2
+package org.javagirls.chapter_2
 
 // fun palavra chave para declarar uma função
 // não é necessário declarar as funções dentro de uma classe
@@ -12,6 +12,7 @@ fun main() {
     println("Máximo entre 1 e 2 é " + maxExpressionBody(1, 2))
     println("Máximo entre 10 e 20 é " + maxExpressionBodySimpler(10, 20))
 }
+
 
 // fun nomeFuncao | parâmetros e respectivos tipos | tipo de retorno
 // Função com block body (código entre chaves), obrigatória ter a cláusula return

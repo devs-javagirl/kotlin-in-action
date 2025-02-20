@@ -1,4 +1,4 @@
-package org.javagirls.capitulo_2.java;
+package org.javagirls.chapter_2.java;
 
 public class Variables {
     public static void main(String[] args) {

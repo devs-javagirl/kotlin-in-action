@@ -1,4 +1,4 @@
-package org.javagirls.capitulo_2
+package org.javagirls.chapter_2
 
 fun main() {
     println("KOTLIN --------------------------")
@@ -24,6 +24,7 @@ fun main() {
     languages.add("Python")
     println(languages)
 
+
     val result: String
     if (canPerformOperation()) {
         result = "Success"
@@ -35,6 +36,7 @@ fun main() {
     // var = variable ( pode ser atribuído novo valor )
     var answerVar = 42
     answerVar = 45
+
     println(answerVar)
 
 }

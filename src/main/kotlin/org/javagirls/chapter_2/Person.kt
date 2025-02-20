@@ -1,4 +1,4 @@
-package org.javagirls.capitulo_2
+package org.javagirls.chapter_2
 
 // por default, todas as classes no Kotlin são public
 class Person(

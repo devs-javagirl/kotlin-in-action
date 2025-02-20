@@ -1,4 +1,4 @@
-package org.javagirls.capitulo_2.java;
+package org.javagirls.chapter_2.java;
 
 import java.util.Scanner;
 

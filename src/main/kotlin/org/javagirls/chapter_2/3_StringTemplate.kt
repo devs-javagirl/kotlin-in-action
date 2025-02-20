@@ -1,4 +1,4 @@
-package org.javagirls.capitulo_2
+package org.javagirls.chapter_2
 
 fun main() {
     println("KOTLIN --------------------------")
@@ -15,7 +15,7 @@ fun main() {
     println("Hello, ${if (name.isBlank()) "someone" else name }!")
     
     // utilizar barra invertida para imprimir $
-    println("\$ utilizar barra invertida para imprimir $")
+    println("\$name utilizar barra invertida para imprimir $")
 
 
 
