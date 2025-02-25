@@ -53,6 +53,6 @@ public class When {
 
     public static void main(String[] args) {
         System.out.println(getMnemonic(BLUE));
-        System.out.println(getMnemonic(VIOLET));
+        System.out.println(getMnemonicBetter(VIOLET));
     }
 }
