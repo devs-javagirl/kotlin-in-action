@@ -1,6 +1,11 @@
 package org.javagirls.chapter_2
 
-// declaração da interface Expr
+// função para avaliar uma expressão aritmética simples, a soma de 2 números
+// a expressão pode ser representada num árvore, cujo nó pode ser um número ou uma soma
+//      - número é sempre um leaf node (não tem filhos)
+//      - soma tem 2 filhos que são os argumentos da soma ( que pode ser um número ou uma soma )
+
+// declaração da interface marcadora Expr, ela não tem nenhum método_
 interface Expr
 
 // classe Num tem uma propriedade e implementa a interface ( utilização de : )

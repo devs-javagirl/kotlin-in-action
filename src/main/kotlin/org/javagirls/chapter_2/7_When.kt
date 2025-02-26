@@ -5,7 +5,7 @@ import org.javagirls.chapter_2.enum.Color
 import org.javagirls.chapter_2.enum.ColorRGB
 import org.javagirls.chapter_2.enum.ColorRGB.*
 
-// when | expressão | chaves com branches (opções)
+// when | expressão | chaves | branches (opções)
 // when sempre retorna um valor, portanto pode ser utilizado com expression body (sem chaves)
 // é obrigatório indicar todas as possibilidade no when, ou incluir else
 // when expression must be exaustive, add necessary XXX branch or else branch instead
@@ -38,7 +38,7 @@ fun getWarmthFromSensor1(): String {
 
 // simplificando a função
 // define a variável color dentro da cláusula when, o escopo da variável fica restrito ao body do when
-// utilização de expression body na função
+// utilização de expression body na função ( não tem chaves e nem return )
 fun getWarmthFromSensor2() =
     when (val color = measureColor()) {
         RED, ORANGE, YELLOW -> "warm (red = ${color.r})"
@@ -49,7 +49,7 @@ fun getWarmthFromSensor2() =
 fun mix(c1: ColorRGB, c2: ColorRGB) =
     // set é uma coleção na qual os objetos não se repetem e a ordem não importa
     // 2 sets são iguais se tiverem o mesmo conteúdo
-    // neste caso o compilador não consegue cobrir todas as posibilidades
+    // neste caso o compilador não consegue cobrir todas as posibilidades do when
     // precisa da utilização do else para garantir todos os cenários "exhaustive"
     when (setOf(c1, c2)) {
         setOf(RED, YELLOW) -> ORANGE
@@ -76,9 +76,9 @@ fun mixOptimized(c1: ColorRGB, c2: ColorRGB) =
 
 fun main() {
     println(getMnemonic(Color.BLUE))
-    println(getWarmthFromSensor1())
-    println(getWarmthFromSensor2())
-    println(mix(BLUE, YELLOW))
-    println(mixOptimized(BLUE, YELLOW))
+    //println(getWarmthFromSensor1())
+    //println(getWarmthFromSensor2())
+    //println(mix(BLUE, YELLOW))
+    //println(mixOptimized(BLUE, YELLOW))
 
 }
