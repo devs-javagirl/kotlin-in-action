@@ -1,10 +1,19 @@
 package org.javagirls.chapter_2.java;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
 public class Iterating {
+
+    private static void listOfColors() {
+        List<String> colors = List.of("red", "green", "blue");
+        for (String color: colors) {
+            System.out.println(color);
+        }
+    }
+
     private static void mapOfChars() {
         Map<Character, String> binaryReps = new HashMap();
 
@@ -20,6 +29,7 @@ public class Iterating {
     }
 
     public static void main(String[] args) {
+        listOfColors();
         mapOfChars();
     }
 }

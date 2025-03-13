@@ -74,6 +74,8 @@ fun evalWithLogging(e: Expr) : Int =
     }
 
 fun main() {
+    println(eval(Num(1)))
+    println(eval(Sum(Num(1), Num(2))))
     println(eval(Sum(Sum(Num(1), Num(2)), Num(4))))
     println(evalSimpler1(Sum(Sum(Num(1), Num(2)), Num(4))))
     println(evalSimpler2(Sum(Sum(Num(1), Num(2)), Num(4))))

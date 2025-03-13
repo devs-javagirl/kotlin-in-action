@@ -3,6 +3,7 @@ package org.javagirls.chapter_2
 // iteração numa lista de strings
 fun printColors() {
     val collection = listOf("red", "green", "blue")
+    // iteração na lista utilizando operador in
     for (color in collection) {
         print("$color ")
     }
