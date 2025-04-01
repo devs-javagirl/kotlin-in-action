@@ -1,5 +1,6 @@
 package org.javagirls.chapter_4
 
+// uso de backing field
 class UserBacking(val name: String) {
     var address: String = "unspecified"
     set(value: String) {
@@ -11,11 +12,12 @@ class UserBacking(val name: String) {
     }
 }
 
+// definição do setter sem uso de backing field
 class Person(var birthYear: Int) {
     var ageIn2050
         get() = 2050 - birthYear
         set(value) {
-            birthYear - 2050 - value
+            birthYear = 2050 - value
         }
 }
 
