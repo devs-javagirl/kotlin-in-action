@@ -17,9 +17,13 @@ fun main() {
     val processed = hashSetOf(c1, c2)
     println(processed.contains(c3))
 
-    println("referência de c1 é igual a c3 ? ${c1 === c3}")
+    println("Conteudo de c1 é igual a c3 ? ${c1 == c3}") //conteúdo
+    println("referência de c1 é igual a c3 ? ${c1 === c3}") //endereço
+
 
     val c4 = c2.copy(name = "John")
-    println(c4)
+    val c5 = c3; //cuidado com isso
+    println("Cópia de c2: ${c4.name}, ${c4.postalCode}")
+    println("Cópia de c3: ${c5.name}, ${c5.postalCode}, ${c5 === c3})")
 
 }
