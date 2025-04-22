@@ -13,7 +13,7 @@ class UserBacking(val name: String) {
 }
 
 // definição do setter sem uso de backing field
-class Person(var birthYear: Int) {
+class Person(var birthYear: Int, var name: String) {
     var ageIn2050
         get() = 2050 - birthYear
         set(value) {
@@ -26,7 +26,7 @@ fun main() {
     user.address = "Av Paulista, 900"
     println(user.address)
 
-    val person = Person(2040)
+    val person = Person(2040, "Maria")
     println("idade em 2050 para nascimento em 2040 é ${person.ageIn2050}")
     person.birthYear = 2045
     println("idade em 2050 para nascimento em 2045 é ${person.ageIn2050}")
