@@ -6,16 +6,31 @@ interface ButtonListener {
 }
 
 class ButtonNew(private val listener: ButtonListener) {
+    fun click() {
+        listener.onClick()
+    }
+
+    fun enter() {
+        listener.onEnter()
+    }
 
 }
 
 fun main(){
     var clickCount = 0
-    ButtonNew(object: ButtonListener {
+    val button = ButtonNew(object: ButtonListener {
         override fun onClick() {
             clickCount++
+            println("cliquei no botão $clickCount vez(es)")
         }
-        override fun onEnter() {}
+        override fun onEnter() {
+            println("enter no botão")
+        }
     })
+
+    button.click()
+    button.enter()
+    button.click()
+
 
 }

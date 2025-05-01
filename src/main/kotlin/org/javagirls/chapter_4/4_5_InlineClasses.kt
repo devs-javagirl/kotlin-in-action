@@ -2,12 +2,12 @@ package org.javagirls.chapter_4
 
 class UsdCent(val amount: Int)
 
-@JvmInline
-value class UsdCentInline(val amount: Int)
-
 fun addExpense(expense: UsdCent) {
     println("expense $expense")
 }
+
+@JvmInline
+value class UsdCentInline(val amount: Int)
 
 fun addExpense(expense: UsdCentInline) {
     println("expense inline $expense")

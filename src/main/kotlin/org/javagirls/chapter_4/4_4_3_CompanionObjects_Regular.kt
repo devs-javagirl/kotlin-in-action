@@ -23,7 +23,7 @@ class Employeee(val name: String) {
 // Extension function utilizando companion object, não precisa instanciar a classe
 fun Employeee.Companion.getGmail(name: String) = "$name@gmail.com"
 
-// Extension function sem companion, precisa instanciar a classe para utiliar a função
+// Extension function sem companion, precisa instanciar a classe para utilizar a função
 fun Employeee.getYahooMail(name: String) = "$name@yahoo.com"
 
 fun main() {
@@ -32,16 +32,16 @@ fun main() {
         { 'name':'Dmitry' }
         """
     )
+
+    println(employee.nickname)
+
     val employee1 = Employee.fromJsonSimpleQuote(
         """
         { 'name':'Dmitry' }
         """
     )
 
-    println(employee.nickname)
     println(employee1.nickname)
-
-    println(Employeee.getGmail("javagirls"))
 
     val employeee = Employeee.fromJson(
         """
@@ -51,6 +51,8 @@ fun main() {
 
     println(employeee.name)
     println(employeee.getYahooMail(employeee.name))
+
+    println(Employeee.getGmail("javagirls"))
 
 }
 
