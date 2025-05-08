@@ -2,7 +2,7 @@ package org.javagirls.chapter_5
 
 // ESTRUTURA DE UMA LAMBDA
 // lambda sempre entre chaves
-// esquerda: parâmetros -> direita: corpo da funçção
+// esquerda: parâmetros -> direita: corpo da função
 
 fun main() {
     { println(42) }()
@@ -12,11 +12,13 @@ fun main() {
     val simpleSum = { x: Int, y: Int -> x + y }
     println(simpleSum(1, 2))
 
-    val myFavoriteNumer = run {
+    val myFavoriteNumber = run {
         println("I'm thinking!")
         println("I'm doing some more work")
-        42
+        5
     }
+
+    println("myFavoriteNumber = $myFavoriteNumber")
 
     val people = listOf(Person("Alice", 29), Person("Bob", 31))
 

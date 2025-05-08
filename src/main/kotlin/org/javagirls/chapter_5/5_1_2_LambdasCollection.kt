@@ -1,6 +1,8 @@
 package org.javagirls.chapter_5
 
-data class Person(val name: String, val age: Int)
+import java.time.LocalDate
+
+data class Person(val name: String, val age: Int, val birthday: LocalDate = LocalDate.now())
 
 fun findTheOldest(people: List<Person>) {
     var maxAge = 0
@@ -15,9 +17,10 @@ fun findTheOldest(people: List<Person>) {
 }
 
 fun main() {
-    val people = listOf(Person("Alice", 29), Person("Bob", 31))
+    val people = listOf(Person("Alice", 29, LocalDate.of(1980, 5, 1)),
+        Person("Bob", 31, LocalDate.of(1970, 5, 1)))
     findTheOldest(people)
 
-    println(people.maxByOrNull { it.age })
+    println(people.maxByOrNull { it.birthday })
 
 }
