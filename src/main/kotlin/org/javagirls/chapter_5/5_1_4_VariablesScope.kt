@@ -29,4 +29,11 @@ fun main() {
 
     printProblemCounts(errors)
 
+    // lambda alterando valor da variável
+    var counter = 0
+    val inc = { counter ++ }
+    run(inc)
+    run(inc)
+    println(counter)
+
 }
