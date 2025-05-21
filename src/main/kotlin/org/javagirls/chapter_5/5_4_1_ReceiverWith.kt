@@ -9,7 +9,7 @@ fun alphabet(): String {
     return result.toString()
 }
 
-fun alphabetWith(): String {
+fun alphabetWithThis(): String {
     val stringBuilder = StringBuilder()
 
     return with(stringBuilder) {
@@ -43,7 +43,7 @@ fun alphabetExprBody() = with(StringBuilder()) {
 
 fun main() {
     println(alphabet())
-    println(alphabetWith())
+    println(alphabetWithThis())
     println(alphabetWithoutThis())
     println(alphabetExprBody())
 }

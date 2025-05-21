@@ -20,9 +20,10 @@ fun main() {
 
     println(isOdd.checkChar('3'))
 
+    println(checkCondition(1, { it % 2 != 0}))
     // se a lambda for o último argumento da função, ela pode ser colocada fora dos parênteses
     println(checkCondition(1) { it % 2 != 0})
-    println(checkCondition(1, { it % 2 != 0}))
+
 
     // definindo uma lambda com a mesma assinatura da interface IntCondition
     val isOdd2: (Int) -> Boolean = { it % 2 != 0 }

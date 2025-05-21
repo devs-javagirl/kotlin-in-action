@@ -4,12 +4,12 @@ fun interface StringConsumer {
     fun consume(s: String)
 }
 
-// Utilizando functional interface
+// função utilizando functional interface
 fun consumeHello(t: StringConsumer) {
     t.consume("Hello")
 }
 
-// Utilizando functional type
+// função utilizando functional type
 fun consumeHelloFunctional(t: (String) -> Unit) {
     t("Hello")
 }
