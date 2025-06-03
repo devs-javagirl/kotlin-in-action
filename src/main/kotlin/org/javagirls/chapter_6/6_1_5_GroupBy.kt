@@ -8,6 +8,6 @@ val groupByPeople = listOf(
 val list = listOf("apple", "apricot", "banana", "cantaloup")
 
 fun main() {
-    println(people.groupBy { it.age })
+    println(groupByPeople.groupBy { it.age })
     println(list.groupBy(String::first))
 }
