@@ -32,4 +32,5 @@ fun main() {
     println(peoplePredicate.find(canBeInClub28))
     // Sinônimo para find
     println(peoplePredicate.firstOrNull(canBeInClub28))
+    //println(emptyList<Person>().first(canBeInClub28))
 }
