@@ -11,8 +11,15 @@ val library = listOf(
 fun main() {
     val authors = library.map { it.authors }
     println(authors)
+    println("flatten -> ${authors.flatten()}")
 
     val authorsFlatMap = library.flatMap { it.authors }
-    println(authorsFlatMap)
-    println(authorsFlatMap.toSet())
+    println("flatMap -> $authorsFlatMap")
+    println("flatMap.toSet -> ${authorsFlatMap.toSet()}")
+
+    val numbers = listOf(listOf(1, 4, 7, 0), listOf(8,  2, 1))
+    println(numbers)
+    println(numbers.flatten())
+
+
 }
