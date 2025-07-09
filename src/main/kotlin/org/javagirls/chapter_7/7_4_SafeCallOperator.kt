@@ -16,7 +16,7 @@ fun main() {
     println(managerName(developer))
     println(managerName(ceo))
 
-    val person = Person("Dmitry", null)
+    val person = Person("Dmitry", null, "dmitry@gmail.com")
     println(person.countryName())
 }
 
@@ -28,7 +28,7 @@ class Address(val streetAddress: String, val zipCode: Int, val city: String, val
 
 class Company(val name: String, val address: Address?)
 
-class Person(val name: String, val company: Company?)
+class Person(val name: String, val company: Company?, val email: String)
 
 fun Person.countryName(): String {
     val country = this.company?.address?.country

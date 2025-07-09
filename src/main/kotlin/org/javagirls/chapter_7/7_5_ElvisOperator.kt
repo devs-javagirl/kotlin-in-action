@@ -16,7 +16,7 @@ fun main() {
 
     val address = Address("Elsestr, 47", 80687, "Mnich", "Germany")
     val jetbrains = Company("JetBrains", address)
-    val person = Person("Dmitry", jetbrains)
+    val person = Person("Dmitry", jetbrains, "dmitry@gmail.com")
     printShippingLabel(person)
 
     //printShippingLabel(Person("Alexey", null))
