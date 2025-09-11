@@ -1,11 +1,15 @@
 package org.javagirls.chapter_6
 
 fun ifEmpty() {
-    val empty = emptyList<String>()
+    val empty = mutableListOf<String>()
     val full = listOf("apple", "orange", "banana")
 
-    println(empty.ifEmpty { listOf("no", "values", "here") })
-
+    println(empty.ifEmpty {
+        empty.add("a")
+        empty.add("b")
+        empty.add("c")
+        empty.toList()
+    })
     println(full.ifEmpty { listOf("no", "values", "here")})
 }
 
@@ -16,6 +20,7 @@ fun ifBlank() {
     println(blankName.ifEmpty { "ifEmpty --> (unnamed)" })
     println(blankName.ifBlank { "ifBlank --> (unnamed)" })
     println(name.ifBlank { "ifBlank --> (unnamed)" })
+
 }
 fun main() {
     ifEmpty()

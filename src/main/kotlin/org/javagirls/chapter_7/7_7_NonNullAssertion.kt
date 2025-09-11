@@ -29,7 +29,7 @@ class CopyRowAction(val list: SelectableTextList) {
 
 fun main() {
     // first
-    //ignoreNulls(null)
+    ignoreNulls("Kotlin")
 
     // second
     val content = SelectableTextList(
@@ -39,24 +39,29 @@ fun main() {
 
     val content1 = SelectableTextList(
         listOf("glass", "fork", "knife"),
-        1
+        0
     )
 
     val sheet = CopyRowAction(content)
     if (sheet.isActionEnabled())
         println(sheet.executeCopyRow())
 
+
+
+
     // third
     val company = Company("Bosch", null)
     val person = Person("Cris", company, "cris@gmail.com")
 
-    println(person.company!!.address!!.country)
-    /*
+    //println(person.company!!.address!!.country)
+
     println(person
         .company!!
         .address!!
         .country)
-    */
+
+
+
 }
 
 

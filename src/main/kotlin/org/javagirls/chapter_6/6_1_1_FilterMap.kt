@@ -25,11 +25,11 @@ fun printName() {
 
 fun getNamePeopleOlderThan30() {
     println(people.filter { it.age > 30}
-        .map { it.name
-        })
+        .map { it.name})
 }
 
 fun getOldestPerson() {
+    // bad approach, as it iterates through the list multiple times
     println(people.filter {
         val oldestPerson = people.maxByOrNull(Person::age)
         it.age == oldestPerson?.age
@@ -37,6 +37,7 @@ fun getOldestPerson() {
 }
 
 fun getOldestPersonImproved() {
+    //best approach, iterates through the list only once
     val maxAge = people.maxByOrNull(Person::age)?.age
     println(people.filter { it.age == maxAge })
 }
@@ -59,6 +60,11 @@ fun numbersUppercase() {
     println(numbers.mapValues { it.value.uppercase()})
 }
 
+fun numbersKeys() {
+    val numbers = mapOf(0 to "zero", 1 to "one")
+    println(numbers.mapKeys { it.key % 2 == 0 })
+}
+
 fun main() {
     evenNumbers()
     peopleOlderThan30()
@@ -69,4 +75,5 @@ fun main() {
     getOldestPersonImproved()
     numbersIndexed()
     numbersUppercase()
+    numbersKeys()
 }

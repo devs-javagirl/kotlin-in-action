@@ -18,6 +18,10 @@ operator fun Point.times(scale: Double): Point {
 operator fun Char.times(count: Int): String {
     return toString().repeat(count)
 }
+operator fun Point.div(scale: Double): Point {
+    return Point((x / scale).toInt(), (y / scale).toInt())
+}
+
 
 fun main() {
     val p1 = Point(10, 20)

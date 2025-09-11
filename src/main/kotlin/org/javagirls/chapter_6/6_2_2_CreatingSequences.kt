@@ -4,7 +4,7 @@ import java.io.File
 
 fun naturalNumbersSum() {
     val naturalNumbers = generateSequence(0) { it + 1 }
-    val numbersTo100 = naturalNumbers.takeWhile { it <= 100 }
+    val numbersTo100 = naturalNumbers.takeWhile { it <= 5 }
     println(numbersTo100.sum())
 }
 
@@ -18,6 +18,6 @@ fun main() {
     val fileHidden = File("C:\\Users\\Default\\Desktop")
     println(fileHidden.isInsideHiddenDirectory())
 
-    val file = File("C:\\Users\\Público\\Desktop")
+    val file = File("C:\\Users\\Public\\Libraries")
     println(file.isInsideHiddenDirectory())
 }

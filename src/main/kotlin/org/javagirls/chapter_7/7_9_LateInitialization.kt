@@ -5,9 +5,11 @@ import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.TestInstance
 
+
 class MyService {
     fun performAction(): String = "Action Done!"
 }
+
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 class MyTestNullable {
@@ -38,3 +40,4 @@ class MyTest {
         assertEquals("Action Done!", myService.performAction())
     }
 }
+

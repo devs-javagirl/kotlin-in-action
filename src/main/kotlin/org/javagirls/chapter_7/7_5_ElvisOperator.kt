@@ -19,7 +19,7 @@ fun main() {
     val person = Person("Dmitry", jetbrains, "dmitry@gmail.com")
     printShippingLabel(person)
 
-    //printShippingLabel(Person("Alexey", null))
+    printShippingLabel(Person("Alexey", null , ""))
 }
 
 fun strLenSafeElvis(s: String?): Int = s?.length ?: 0

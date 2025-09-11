@@ -8,13 +8,13 @@ val peopleSequence= listOf(
 )
 
 fun main() {
-    println(peopleSequence.map(Person::name).filter { it.startsWith("A")})
-
     val nameSequence = peopleSequence
         .asSequence()
+        .filter { it.name.startsWith("A") } //filter before mapping reduce time and memory usage
         .map(Person::name)
-        .filter { it.startsWith("A") }
         .toList()
 
     println(nameSequence)
+
+    println(peopleSequence.map(Person::name).filter { it.startsWith("A")})
 }

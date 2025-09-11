@@ -19,4 +19,6 @@ fun main() {
 
     println("big decimal pre increment -> ${++bd}")
 
+    println("big decimal -> ${bd}")
+
 }
