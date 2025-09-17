@@ -7,5 +7,6 @@ val countries = listOf("DE", "NL", "US")
 fun main() {
     println(names.zip(ages))
     println(names.zip(ages) { name, age -> Person(name, age)})
-    println(names zip ages zip countries)
+    val mix = names zip ages zip countries
+    println(mix)
 }

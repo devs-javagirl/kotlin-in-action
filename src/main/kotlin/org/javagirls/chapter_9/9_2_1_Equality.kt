@@ -7,6 +7,11 @@ class Point1(val x: Int, val y: Int) {
         return other.x == x && other.y == y
     }
 
+    override fun hashCode(): Int {
+        var result = x
+        result = 31 * result + y
+        return result
+    }
 }
 
 fun main() {

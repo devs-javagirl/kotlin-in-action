@@ -13,13 +13,16 @@ fun main() {
     println("Byte bit ${byte.toBitString()}")
 
     println("UByte MAX_VALUE ${UByte.MAX_VALUE}")
-    println("UByte MAX_VALUE ${UByte.MIN_VALUE}")
+    println("UByte MIN_VALUE ${UByte.MIN_VALUE}")
 
     println("Byte MAX_VALUE ${Byte.MAX_VALUE}")
-    println("Byte MAX_VALUE ${Byte.MIN_VALUE}")
+    println("Byte MIN_VALUE ${Byte.MIN_VALUE}")
 
     println("ULong $uLong")
-    println("ULong ${uLong.toBitString()}")
+    println("ULong bits ${uLong.toBitString()}")
+
+    println("ULong MAX_VALUE ${ULong.MAX_VALUE}")
+    println("ULong MIN_VALUE ${ULong.MIN_VALUE}")
 
 
 }
@@ -30,4 +33,4 @@ fun Byte.toBitString(): String =
 fun UByte.toBitString(): String = this.toString(2).padStart(8, '0')
 
 fun ULong.toBitString(): String =
-    (this.toInt() and 0xFF).toString(2).padStart(8, '0')
+    this.toString(2).padStart(64, '0')

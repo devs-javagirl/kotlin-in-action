@@ -24,10 +24,10 @@ val fibonnaci = buildList {
     add(index = 0, element = 3)
 }
 
-val shouldAdd = true
+var shouldAdd = true
 
 val fruits = buildSet {
-    add("Apple")
+    add(1)
     if(shouldAdd) {
         addAll(listOf("Apple", "Banana", "Cherry"))
     }
@@ -35,13 +35,12 @@ val fruits = buildSet {
 
 val medals = buildMap<String, Int> {
     put("Gold", 1)
-    putAll(listOf("Silver" to 2, "Bronze" to 3))
+    putAll(listOf("Silver" to 10, "Bronze" to 3))
 }
 
 fun main() {
     println(alphabetApply())
     println(alphabetBuildString())
-
     println(fibonnaci)
     println(fruits)
     println(medals)

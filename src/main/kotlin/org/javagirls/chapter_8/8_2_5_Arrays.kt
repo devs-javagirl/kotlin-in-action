@@ -13,7 +13,7 @@ fun alphabet() {
             i -> ('a' + i).toString()
     }
 
-    println(letters.joinToString(""))
+    println(letters.joinToString("-"))
 }
 
 fun alphabetWithComma() {

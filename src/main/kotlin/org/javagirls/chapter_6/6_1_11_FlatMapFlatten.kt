@@ -19,7 +19,7 @@ fun main() {
 
     val numbers = listOf(listOf(1, 4, 7, 0), listOf(8,  2, 1))
     println(numbers)
-    println(numbers.flatten())
+    println(numbers.flatten().toSet())
 
 
 }

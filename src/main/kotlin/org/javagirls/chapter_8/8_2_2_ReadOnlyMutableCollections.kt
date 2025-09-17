@@ -26,6 +26,7 @@ fun main() {
 
     println(readOnlyList) // [1, 2, 3]
     mutableList.add(4)
+    mutableList.add(4)
     println(readOnlyList) // [1, 2, 3, 4]
 
 }

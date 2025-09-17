@@ -2,7 +2,6 @@ package org.javagirls.chapter_9
 
 operator fun<T> MutableCollection<T>.plusAssign(element: T) {
     this.add(element)
-
 }
 
 fun main() {
