@@ -2,6 +2,7 @@ package org.javagirls.chapter_9
 
 import java.time.LocalDate
 
+@OptIn(kotlin.ExperimentalStdlibApi::class)
 fun rangeWithDays() {
     val now = LocalDate.now()
 
@@ -38,6 +39,7 @@ fun rangeForEach() {
     println()
 }
 
+@OptIn(kotlin.ExperimentalStdlibApi::class)
 fun rangeUntil() {
     println("rangeUntil")
     (0..<9).forEach { print(it)}

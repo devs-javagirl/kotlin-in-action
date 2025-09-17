@@ -2,6 +2,7 @@ package org.javagirls.chapter_9
 
 data class Rectangle(val upperLeft: Point, val lowerRight: Point)
 
+@OptIn(kotlin.ExperimentalStdlibApi::class)
 operator fun Rectangle.contains(p: Point): Boolean {
     return p.x in upperLeft.x..<lowerRight.x &&
             p.y in upperLeft.y..<lowerRight.y
