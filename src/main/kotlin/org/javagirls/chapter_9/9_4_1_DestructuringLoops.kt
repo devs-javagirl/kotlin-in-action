@@ -2,7 +2,7 @@ package org.javagirls.chapter_9
 
 fun printEntriesFor(map: Map<String, String>) {
     for((key, value) in map) {
-        println("printEntriesFor: $key -> $value")
+        println("printEntriesFor: $key - $value")
     }
 }
 
@@ -13,7 +13,7 @@ fun printEntriesForEach(map: Map<String, String>) {
 }
 
 fun main() {
-    val map = mapOf("Oracle" to "Java", "JetBrains" to "Kotlin")
+    val map = mapOf("Oracle" to "Java", "JetBrains" to "Kotlin", "Microsoft" to "C#")
     printEntriesFor(map)
     printEntriesForEach(map)
 }
