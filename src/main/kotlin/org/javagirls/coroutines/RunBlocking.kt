@@ -1,4 +1,4 @@
-package org.javagirls.design_patterns.coroutines
+package org.javagirls.coroutines
 
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
