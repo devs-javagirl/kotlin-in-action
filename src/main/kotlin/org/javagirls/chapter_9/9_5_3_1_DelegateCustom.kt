@@ -31,3 +31,23 @@ class Person(val name: String, age: Int, salary: Int): Observable() {
             _salary.setValue(newValue)    // Delega o setter para ObservableProperty
         }
 }
+
+fun main() {
+    val p = Person("Seb", 28, 1000)
+    p.observers += Observer { propName, oldValue, newValue ->
+        println(
+            """
+            Property $propName changed from $oldValue to $newValue!
+            """.trimIndent()
+        )
+    }
+    p.age = 29
+    // Property age changed from 28 to 29!
+    p.salary = 1500
+    // Property salary changed from 1000 to 1500!
+
+    p.age = 30
+    // Property age changed from 28 to 29!
+    p.salary = 2000
+
+}
