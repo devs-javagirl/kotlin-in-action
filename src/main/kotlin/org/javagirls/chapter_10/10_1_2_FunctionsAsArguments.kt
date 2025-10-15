@@ -1,7 +1,5 @@
 package org.javagirls.chapter_10
 
-import kotlin.jvm.functions.FunctionN
-
 fun twoAndThree(operation: (Int, Int) -> Int) {
     val result = operation(2, 3)
     println("The result is $result")
