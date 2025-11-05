@@ -27,5 +27,5 @@ fun main() {
         println("fake lock withLock")
     }
 
-    println(readFirstLineFromFile("../../src/main/resources/TestFile"))
+    println(readFirstLineFromFile("src/main/resources/TestFile"))
 }
