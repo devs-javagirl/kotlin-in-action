@@ -21,13 +21,14 @@ fun <T> ensureTrailingPeriod(seq: T)
 
 fun main() {
     println(listOf(1, 2, 3).sum())
-    println(oneHalf(3))
+    println(oneHalf(3.5))
 
-    println(max("kotlin", "java"))
+    println(max("Go", "java"))
     println(max(9L, 10L))
+
     //println(max("kotlin", 42))
 
-    val helloWorld = StringBuilder("Hello World")
+    val helloWorld = StringBuilder(1)
     ensureTrailingPeriod(helloWorld)
     println(helloWorld)
 }

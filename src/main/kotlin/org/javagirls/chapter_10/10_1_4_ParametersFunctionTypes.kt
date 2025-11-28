@@ -59,7 +59,7 @@ fun main() {
 
     println(letters.joinToStringWithTransform { it.lowercase() })
 
-    println(letters.joinToStringWithTransform(separator = "!", postfix = "! ", transform = { it.uppercase() }))
+    println(letters.joinToStringWithTransform(separator = "-", postfix = "- ", transform = { it.uppercase() }))
 
     println(letters.joinToStringWithNullableTransform(separator = "!", postfix = "! ",
         transform =  { it.lowercase() })

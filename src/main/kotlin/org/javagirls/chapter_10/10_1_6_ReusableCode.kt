@@ -1,7 +1,5 @@
 package org.javagirls.chapter_10
 
-
-
 // 10.1.6 - Eliminando Duplicação com Funções de Ordem Superior
 
     enum class OS { WINDOWS, MAC, IOS, ANDROID }
@@ -96,6 +94,8 @@ class `10_1_6_ReusableCode` {
 
         val androidVisits = analyzer.log.averageDurationFor { it.os == OS.ANDROID }
         println("Duração média Android: $androidVisits")
+
+        ProductAnalyzer().demonstrate()
     }
 
     // EXEMPLO ADICIONAL: Aplicando o conceito em outro contexto
@@ -132,10 +132,5 @@ class `10_1_6_ReusableCode` {
             println("Preço médio produtos caros: $avgExpensive")
         }
     }
-
-// Para testar o exemplo adicional:
-// fun main() {
-//     ProductAnalyzer().demonstrate()
-// }
 
 

@@ -8,13 +8,21 @@ fun main() {
 
     val authors = listOf("Sveta", "Seb", "Roman", "Dima")
     val readers = mutableListOf("Seb", "Hadi")
-    println(readers.filter { it !in authors })
+    println(readers.filter { it in authors })
 
     // NÃO É PERMITIDO TYPE PARAMETER PARA PROPRIEDADE DE NON-EXTENSION FUNCTION
-    // val <T> x: T = println("type parameter para propriedade")
+    //val <T> x: T = println("type parameter para propriedade")
 }
 
-//fun <T> List<T>.filter(predicate: (T) -> Boolean): List<T>
+fun <String> List<String>.filter(predicate: (String) -> Boolean): List<String> {
+    val result = mutableListOf<String>()
+    for (item in this) {
+        if (predicate(item)) {
+            result.add(item)
+        }
+    }
+    return result
+}
 
 
 

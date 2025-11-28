@@ -9,12 +9,13 @@ class Person5 {
 
     var name: String by _attributes
     var company: String by _attributes
+    var city: String by _attributes
 
 }
 
 fun main() {
     val p = Person5()
-    val data = mapOf("name" to "Seb", "company" to "JetBrains")
+    val data = mapOf("name" to "Seb", "company" to "JetBrains", "city" to "Prague")
 
     for ((attrName, value) in data)
         p.setAttribute(attrName, value)
@@ -23,6 +24,7 @@ fun main() {
     p.name = "Sebastian"
     println(p.name)
     println(p.company)
+    println(p.city)
 
 
 }
