@@ -4,7 +4,7 @@ package org.javagirls.chapter_11
 // -----------------------------------------
 // 1. Processor<T> (T é Any? por padrão)
 // -----------------------------------------
-class Processor<T> {
+class Processor1<T> {
     fun process(value: T) {
         // value pode ser null → safe call
         println("hash = ${value?.hashCode()}")
@@ -14,7 +14,7 @@ class Processor<T> {
 // -----------------------------------------
 // 2. NonNullProcessor<T : Any> (T nunca é null)
 // -----------------------------------------
-class NonNullProcessor<T : Any> {
+class NonNullProcessor1<T : Any> {
     fun process(value: T) {
         println("hash = ${value.hashCode()}")
     }
@@ -60,12 +60,12 @@ class KBox<T> : JBox<T> {
 fun main() {
 
     println("=== Processor normal (aceita null) ===")
-    val p1 = Processor<String?>()
+    val p1 = Processor1<String?>()
     p1.process(null)
     p1.process("abc")
 
     println("\n=== Processor com T : Any (não aceita null) ===")
-    val p2 = NonNullProcessor<String>()
+    val p2 = NonNullProcessor1<String>()
     // p2.process(null) // ERRO de compilação
     p2.process("abc")
 

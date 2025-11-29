@@ -6,7 +6,7 @@ class Processor<T> {
     }
 }
 
-class ProcessorNonNull<T : Any> {
+class ProcessorNonNull<T : Number> {
     fun process(value: T) {
         println(value.hashCode())
     }
@@ -15,6 +15,6 @@ fun main() {
     val nullableStringProcessor = Processor<kotlin.String?>()
     nullableStringProcessor.process(null)
 
-    val nonNullStringProcessor = ProcessorNonNull<kotlin.String>()
-    nonNullStringProcessor.process("test")
+    val nonNullStringProcessor = ProcessorNonNull<Number>()
+    nonNullStringProcessor.process(Integer.MIN_VALUE)
 }
