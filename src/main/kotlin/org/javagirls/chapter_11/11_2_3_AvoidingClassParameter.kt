@@ -4,9 +4,8 @@ import java.util.ServiceLoader
 
 
         // Função reified equivalente ao exemplo do livro
-        inline fun <reified T> loadService(): T? {
-            val loader = ServiceLoader.load(T::class.java)
-            return loader.findFirst().orElse(null)
+        inline fun <reified T> loadService(): ServiceLoader<T?>? {
+            return ServiceLoader.load(T::class.java)
         }
 
         // Serviço usado para teste
@@ -22,14 +21,20 @@ import java.util.ServiceLoader
             println("=== Exercício 11.2.3 ===")
 
             // Chamada usando reified (igual ao livro)
-            val service = loadService<MyService>()
+            val service = loadService<MyServiceImpl>()
 
             if (service != null) {
-                println(service.execute())
+                    println(service.execute())
             } else {
                 println("Nenhum serviço encontrado.")
             }
         }
+
+private fun ServiceLoader<MyServiceImpl?>.execute(): String {
+    return "Serviço carregado!"
+}
+
+
 
 
 

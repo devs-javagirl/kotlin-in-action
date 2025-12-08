@@ -1,7 +1,9 @@
 package org.javagirls.chapter_11
 
+import java.math.BigInteger
 
-    // ------------------------------------------------------------
+
+// ------------------------------------------------------------
     // 1) Declaração do accessor reified (igual ao livro)
     // ------------------------------------------------------------
     inline val <reified T> T.canonical: String
@@ -21,6 +23,8 @@ package org.javagirls.chapter_11
     // ------------------------------------------------------------
     fun main() {
 
+        String.canonical
+        Boolean.canonical
         println("===== 1) Testes iguais ao livro =====")
         println(listOf(1, 2, 3).canonical)   // java.util.List
         println(1.canonical)                 // java.lang.Integer
