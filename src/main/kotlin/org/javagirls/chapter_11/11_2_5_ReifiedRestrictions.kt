@@ -3,7 +3,7 @@ package org.javagirls.chapter_11
 import java.util.*
 import kotlin.reflect.KClass
 
-inline fun <reified T> loadService() {
+inline fun <reified T> loadService_() {
     //não é possível criar novas instâncias da classe especificada como type parameter
     //val x = T("Roberta", 34)
     ServiceLoader.load(T::class.java)
@@ -19,7 +19,7 @@ fun main() {
     // criar instância a partir de T em loadService
     val person = Person("Sarah")
 
-    loadService<Person>()
+    loadService_<Person>()
 
 }
 
