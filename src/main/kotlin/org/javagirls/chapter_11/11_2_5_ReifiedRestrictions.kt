@@ -18,6 +18,7 @@ data class Person (val name: kotlin.String) {
 fun main() {
     // criar instância a partir de T em loadService
     val person = Person("Sarah")
+
     loadService<Person>()
 
 }
