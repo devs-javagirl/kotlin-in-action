@@ -69,6 +69,7 @@ fun main() {
     val standardCalculator = shippingSystem.getShippingCostCalculator(Delivery.STANDARD)
     println("Frete normal (5 itens): R$ ${standardCalculator(Order(5))}")
 
+
     println("\n=== EXEMPLO 2: Filtro de Contatos ===")
     val contacts = listOf(
         Person("Dmitry", "Jemerov", "123-4567"),
@@ -91,6 +92,7 @@ fun main() {
     val filter2 = contactFilters.getPredicate()
     println("Contatos 'Da' com telefone: ${contacts.filter(filter2)}")
 
+
     println("\n=== EXEMPLO 3: Sistema de Descontos ===")
     val discountSystem = DiscountSystem()
 
@@ -100,9 +102,15 @@ fun main() {
 
     // Cliente normal
     val normalDiscount = discountSystem.getDiscountCalculator(false)
-    println("Cliente normal - R$120,00 com desconto: R$ ${normalDiscount(120.0)}")
+    println("Cliente normal - R$100,00 com desconto: R$ ${normalDiscount(100.0)}")
     println("Cliente normal - R$75,00 com desconto: R$ ${normalDiscount(75.0)}")
     println("Cliente normal - R$30,00 com desconto: R$ ${normalDiscount(30.0)}")
+
+    // Teste do exemplo extra
+    println("\n=== EXEMPLO EXTRA: Fábrica de Operações Matemáticas ===")
+    testMathOperations()
+
+
 }
 
 // ========== EXEMPLO EXTRA: FÁBRICA DE OPERAÇÕES MATEMÁTICAS ==========
@@ -121,7 +129,7 @@ class MathOperationFactory {
 }
 
 // Função para testar o exemplo extra (descomente para usar)
-/*
+
 fun testMathOperations() {
     val factory = MathOperationFactory()
 
@@ -131,4 +139,4 @@ fun testMathOperations() {
     println("5 + 3 = ${add(5.0, 3.0)}")
     println("5 × 3 = ${multiply(5.0, 3.0)}")
 }
-*/
+

@@ -14,7 +14,7 @@ fun main() {
     println(result)
 
     println(
-        people.filter { it.age > 30 }
+        people.filter { it.age < 30 }
             .map(Person_::name)
     )
 }

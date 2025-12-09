@@ -10,30 +10,36 @@ fun readNumbersOrWords(): List<Any> {
 
 fun printList(l: List<Any>) {
     when(l) {
-//        is List<String> -> println("Strings: $l")
-//        is List<Int> -> println("Integers: $l")
+        //is List<String> -> println("Strings: $l")
+        //is List<Int> -> println("Integers: $l")
         is List<*> -> println("é uma lista")
         is Set<*> -> println("é um set")
     }
 }
 
 fun printSum(c: Collection<*>) {
-    val intList = c as? List<Int> ?: throw IllegalArgumentException("List is expected")
-    println(intList.sum())
+    try {
+        val intList = c as? List<Int>
+        println(intList?.sum() ?: 0)
+    } catch (e: Exception) {
+        println(e)
+    }
 }
 
 fun main() {
+    /*
     val list = readNumbersOrWords()
     printList(list)
-
     if (list is List<*>) println("objeto list é uma Lista")
     if (list is Set<*>) println("objeto list é um set")
+     */
 
     printSum(listOf(1, 2, 3))
 
+
     //IllegalArgumentException: List is expected
-    //printSum(setOf(1, 2, 3))
+    printSum(setOf(1, 2, 3))
 
     //ClassCastException: String cannot be cast to class Number
-    //printSum(listOf("a", "b", "c"))
+    printSum(listOf("a", "b", "c"))
 }

@@ -7,6 +7,7 @@ fun lookForAliceLabel(people: List<Person_>) {
         if (it.name != "Alice") return@label
         println("Found Alice label")
     }
+    println("End of lookForAliceLabel")
 }
 
 fun lookForAliceLabel1(people: List<Person_>) {
@@ -15,6 +16,7 @@ fun lookForAliceLabel1(people: List<Person_>) {
         if (it.name != "Alice") return@forEach
         println("Found Alice label1")
     }
+    println("End of lookForAliceLabel1")
 }
 
 

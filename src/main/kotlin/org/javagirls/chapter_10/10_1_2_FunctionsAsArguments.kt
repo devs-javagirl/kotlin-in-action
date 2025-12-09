@@ -27,7 +27,7 @@ fun main() {
     twoAndThree { a, b -> a * b }
 
     println("twoAndThreeDetailed operation")
-    twoAndThreeDetailed { operandA, operandB -> operandA + operandB }
+    twoAndThreeDetailed { a, b -> a + b }
 
     println("twoAndThreeDetailed operation")
     twoAndThreeDetailed { alpha, beta -> alpha + beta }

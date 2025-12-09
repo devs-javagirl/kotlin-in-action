@@ -2,13 +2,14 @@ package org.javagirls.chapter_10
 
 class FunctionStore {
     var myStoredFunction: ((Int) -> Unit) ? = null
+
     //inline fun storeFunction(f: (Int) -> Unit) {
-    fun storeFunction(f: (Int) -> Unit) {
+        fun storeFunction(f: (Int) -> Unit) {
         println("inline doesn't accept storing values")
         myStoredFunction = f
         myStoredFunction!!.invoke(3)
-
     }
+
 }
 
 fun <T, R> Sequence<T>.map(transform: (T) -> R): Sequence<R> {
